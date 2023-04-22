@@ -1,0 +1,20 @@
+# Stage 1
+FROM node:18-alpine AS build
+WORKDIR /app
+COPY . .
+RUN npm install
+RUN npm run build --prod
+# Stage 2
+FROM nginx:alpine
+COPY --from=build /app/dist/flash-card-web /usr/share/nginx/html
+EXPOSE 80
+
+# # Stage 1
+# FROM node:18.15.0 as node
+# WORKDIR /app
+# COPY . .
+# RUN npm install
+# RUN npm run build --prod
+# # Stage 2
+# FROM nginx:alpine
+# COPY --from=node /app/dist/FlashCardWeb /usr/share/nginx/html
