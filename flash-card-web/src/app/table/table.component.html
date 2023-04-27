@@ -1,7 +1,7 @@
 <section class="pb-5 header text-center">
     <div class="container py-5 text-black">
         <header class="py-5">
-            <h1 class="display-4">Card Table</h1>
+            <h1 class="tabletitle display-4">Card Table</h1>
         </header>
 
 
@@ -12,10 +12,10 @@
 
                         <!-- Responsive table -->
                         <div class="table-responsive">
-                            <button class="btn btn-primary btn-sm rounded-0" type="button" routerLink="/add" title="Add">Add New<i class="fa fa-table"></i></button>
+                            <button class="btn btn-primary btn-md rounded-2" type="button" routerLink="/add" title="Add">Add New<i class="fa fa-table"></i></button>
                             <table class="table m-0">
                                 <thead>
-                                    <tr>
+                                    <tr class="bor-top">
                                         <th scope="col">#</th>
                                         <th scope="col">Question</th>
                                         <th scope="col">Answer</th>
@@ -23,18 +23,18 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr *ngFor="let card of FlashCardList">
-                                        <th scope="row">{{card.id}}</th>
+                                    <tr *ngFor="let card of FlashCardList" class="bor-bottom">
+                                        <th scope="row" class="throw">{{card.id}}</th>
                                         <td>{{card.question}}</td>
-                                        <td>{{card.answer}}</td>
+                                        <td class="tddrow">{{card.answer}}</td>
                                         <td>
                                             <!-- Call to action buttons -->
                                             <ul class="list-inline m-0">
                                                 <li class="list-inline-item">
-                                                    <button class="btn btn-success btn-sm rounded-0" type="button" [routerLink]="['/edit', card.id]" title="Edit">Edit<i class="fa fa-edit"></i></button>
+                                                    <button class="btn btn-success btn-sm rounded-3" type="button" [routerLink]="['/edit', card.id]" title="Edit">Edit<i class="fa fa-edit"></i></button>
                                                 </li>
                                                 <li class="list-inline-item">
-                                                    <button class="btn btn-danger btn-sm rounded-0" type="button" (click)="onDelete(card.id)" title="Delete">Delete<i class="fa fa-trash"></i></button>
+                                                    <button class="btn btn-danger btn-sm rounded-3" type="button" (click)="onDelete(card.id)" title="Delete">Delete<i class="fa fa-trash"></i></button>
                                                 </li>
                                             </ul>
                                         </td>

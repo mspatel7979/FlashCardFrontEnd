@@ -1,6 +1,21 @@
-.container{
-    background-image: url(https://images.unsplash.com/photo-1614850523296-d8c1af93d400?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bGlnaHQlMjBjb2xvdXJ8ZW58MHx8MHx8&w=1000&q=80);
-    background-size: cover;
-    background-attachment: fixed;
-    background-position: center;
+.tabletitle{
+    font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-style: italic;
+}
+.bor-top{
+    border-bottom-width: 3px;
+    border-bottom-color: black;
+}
+.bor-bottom{
+    border-bottom-width: 3px;
+    border-bottom-color: black;
+}
+.throw{
+    border-right-width: 3px;
+    border-bottom-color: black;
+}
+.tddrow{
+    border-right-width: 3px;
+    border-left-width: 3px;
+    border-bottom-color: black;
 }
