@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FlashCard } from '../flashcard/Interface/FlashCard';
+import { FlashCard } from '../Interface/FlashCard';
 import { FlashCardApiService } from '../flash-card-api.service';
 import { Router } from '@angular/router';
 
@@ -16,18 +16,18 @@ export class TableComponent implements OnInit{
 
   ngOnInit() : void {
     this.api.GetAllFlashCards().subscribe(data => {
-      console.log(data);
+      //console.log(data);
       this.FlashCardList = data;
-      console.log(this.FlashCardList);
+      //console.log(this.FlashCardList);
     });
   }
 
   onDelete(id : number) : void {
     this.api.GetFlashCardByID(id).subscribe(data => {
-      console.log(data);
+      //console.log(data);
       let card : FlashCard = data;
       this.api.DeleteFlashCard(card).subscribe((res : any) => {
-        console.log(res);
+        //console.log(res);
         this.router.navigate(['']);
       });
     });

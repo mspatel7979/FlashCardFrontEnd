@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
-import { FlashCard } from './flashcard/Interface/FlashCard';
+import { FlashCard } from './Interface/FlashCard';
 
 @Injectable({
   providedIn: 'root'

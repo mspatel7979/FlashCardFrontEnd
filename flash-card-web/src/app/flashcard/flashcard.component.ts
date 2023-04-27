@@ -1,5 +1,5 @@
 import { Component, OnInit} from '@angular/core';
-import { FlashCard } from './Interface/FlashCard';
+import { FlashCard } from '../Interface/FlashCard';
 import { FlashCardApiService } from '../flash-card-api.service';
 import { Router } from '@angular/router';
 
@@ -17,9 +17,9 @@ export class FlashcardComponent implements OnInit {
   ngOnInit() : void {
     this.router.navigateByUrl('');
     this.api.GetAllFlashCards().subscribe(data => {
-      console.log(data);
+      //console.log(data);
       this.FlashCardList = data;
-      console.log(this.FlashCardList);
+      //console.log(this.FlashCardList);
     });
   }
   

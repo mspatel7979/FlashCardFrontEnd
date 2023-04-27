@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { FlashCardApiService } from '../flash-card-api.service';
-import { FlashCard } from '../flashcard/Interface/FlashCard';
+import { FlashCard } from '../Interface/FlashCard';
 import { ActivatedRoute, Router } from '@angular/router';
 
 
@@ -20,12 +20,12 @@ export class EditcardComponent implements OnInit{
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
       let id = params['id'];
-      console.log(`${id}`);
+      //console.log(`${id}`);
       let cardId  = +`${id}`;
-      console.log(cardId);
-      console.log(typeof cardId);
+      //console.log(cardId);
+      //console.log(typeof cardId);
       this.api.GetFlashCardByID(cardId).subscribe(data => {
-        console.log(data);
+        //console.log(data);
         this.card = data;
         this.QF = this.card.question;
         this.AF = this.card.answer;
@@ -45,11 +45,11 @@ export class EditcardComponent implements OnInit{
   onSubmit(event : Event) {
     this.card.question = this.QF;
     this.card.answer = this.AF;
-    console.log(this.card);
+    //console.log(this.card);
     let flashcard : FlashCard = this.card;
-    console.log(flashcard);
+    //console.log(flashcard);
     this.api.UpdateFlashCard(flashcard).subscribe(data => {
-      console.log(data);
+      //console.log(data);
       this.router.navigate(['/table']);
     });
   }
