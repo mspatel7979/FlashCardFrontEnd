@@ -1,0 +1,16 @@
+<section class="edit-new">
+    <h1 class="title">Edit Flash Card</h1>
+    <form class="contact-form row">
+       <div class="form-field col-lg-12">
+          <input id="question" class="input-text js-input" type="text" value="{{QF}}" placeholder="{{QF}}" (keyup)="onKey($event, 'question')">
+          <label class="label" for="question">Question :</label>
+       </div>
+       <div class="form-field col-lg-12">
+        <input id="answer" class="input-text js-input" type="text" value="{{AF}}" placeholder="{{AF}}" (keyup)="onKey($event, 'answer')">
+        <label class="label" for="answer">Answer :</label>
+     </div>
+       <div class="form-field col-lg-12">
+          <input class="submit-btn" type="submit" value="Submit" (click)="onSubmit($event)">
+       </div>
+    </form>
+ </section>

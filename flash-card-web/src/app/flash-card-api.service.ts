@@ -21,4 +21,20 @@ export class FlashCardApiService {
   GetFlashCardByID(cardID : number) : Observable<FlashCard>{
     return this.http.get(this.apiRoot + 'FlashCard/' + cardID) as Observable<FlashCard>;
   }
+
+  // Add Flash Card
+  AddFlashCard(card : FlashCard) : Observable<FlashCard>{
+    return this.http.post(this.apiRoot + 'FlashCard/Add', card) as Observable<FlashCard>;
+  }
+
+  // Update Flash Card
+  UpdateFlashCard(card : FlashCard) : Observable<FlashCard>{
+    return this.http.put(this.apiRoot + 'FlashCard/Update', card) as Observable<FlashCard>;
+  }
+
+  // Delete Flash Card
+  DeleteFlashCard(card : FlashCard) : Observable<FlashCard>{
+    const headers = { 'content-type': 'application/json'};
+    return this.http.delete(this.apiRoot + 'FlashCard/Delete', {body: card, headers: headers}) as Observable<FlashCard>;
+  }
 }

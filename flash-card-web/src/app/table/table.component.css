@@ -1,0 +1,6 @@
+.container{
+    background-image: url(https://images.unsplash.com/photo-1614850523296-d8c1af93d400?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8OHx8bGlnaHQlMjBjb2xvdXJ8ZW58MHx8MHx8&w=1000&q=80);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+}
